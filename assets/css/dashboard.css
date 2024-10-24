@@ -1,0 +1,208 @@
+/* Basic reset untuk menghilangkan padding, margin, dan mengatur box-sizing untuk seluruh elemen */
+*, html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Mengatur warna latar belakang semi-transparan */
+    background-color: rgba(169, 169, 169, 0.47);
+    /* Menambahkan gambar latar */
+    background-image: url(../image/backgroundkedua.jpg);
+    background-repeat: no-repeat; /* Gambar tidak diulang */
+    background-size: cover; /* Gambar menutupi seluruh area */
+    background-position: center; /* Gambar diatur untuk selalu berada di tengah */
+    /* Mengatur font fallback jika Gill Sans tidak tersedia */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* Menambahkan scroll vertikal jika konten lebih tinggi dari viewport */
+    overflow-y: scroll;
+    height: 100vh; /* Tinggi body diatur sesuai tinggi viewport */
+    margin: 0; /* Menghilangkan margin default */
+}
+
+/* Styling untuk navigasi */
+nav {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-between; /* Mengatur elemen di dalam nav dengan jarak antar elemen */
+    align-items: center; /* Vertikal align elemen di tengah */
+    padding: 1rem 2rem; /* Menambahkan padding pada nav */
+    /* Menambahkan bayangan pada nav */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Nav tetap di posisi atas saat di-scroll */
+    top: 0; /* Berada di posisi paling atas */
+    z-index: 1000; /* Memastikan nav berada di atas elemen lainnya */
+}
+
+nav .logo img {
+    width: 50px; /* Mengatur ukuran logo */
+    height: auto; /* Tinggi logo otomatis mengikuti proporsi lebar */
+}
+
+nav ul {
+    display: flex; /* Mengatur menu menggunakan flexbox */
+    align-items: center; /* Mengatur item dalam menu vertikal di tengah */
+    gap: 1.5rem; /* Menambahkan jarak antar item menu */
+    list-style: none; /* Menghilangkan tanda bullet pada daftar */
+}
+
+nav ul li {
+    list-style: none; /* Menghilangkan tanda bullet pada list item */
+}
+
+nav ul li a {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    color: #ffffff; /* Warna teks putih */
+    font-weight: 600; /* Teks bold */
+    padding: 10px 15px; /* Padding di sekitar teks */
+    font-size: 1rem; /* Ukuran font tautan */
+    transition: all 300ms ease-in-out; /* Efek transisi yang mulus */
+    border-bottom: 2px solid transparent; /* Border transparan default */
+    /* Menambahkan bayangan pada teks */
+    text-shadow: 
+        1px 1px 0px rgba(0, 0, 0, 0.7), /* Bayangan kanan bawah */
+        -1px -1px 0px rgba(0, 0, 0, 0.7), /* Bayangan kiri atas */
+        1px -1px 0px rgba(0, 0, 0, 0.7), /* Bayangan kanan atas */
+        -1px 1px 0px rgba(0, 0, 0, 0.7); /* Bayangan kiri bawah */
+}
+
+nav ul li a:hover {
+    color: aqua; /* Warna teks berubah menjadi aqua saat hover */
+    border-bottom: 2px solid black; /* Menambahkan border hitam saat hover */
+    transition: border-bottom 0.3s ease; /* Transisi smooth untuk border */
+}
+
+/* Hero Section untuk area utama halaman */
+.hero {
+    background-size: cover; /* Background hero menutupi seluruh section */
+    background-position: center; /* Background terpusat */
+    padding: 100px 0; /* Padding vertikal untuk hero */
+    text-align: center; /* Konten teks diatur ke tengah */
+    color: rgb(0, 0, 0); /* Warna teks hitam */
+    font-size: 20px; /* Ukuran font default */
+    /* Bayangan untuk teks di hero */
+    text-shadow: 
+    1px 1px 0px rgba(255, 255, 255, 0.7), /* Bayangan kanan bawah */
+    -1px -1px 0px rgba(255, 255, 255, 0.7), /* Bayangan kiri atas */
+    1px -1px 0px rgba(255, 255, 255, 0.7), /* Bayangan kanan atas */
+    -1px 1px 0px rgba(255, 255, 255, 0.7); /* Bayangan kiri bawah */
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Ukuran font untuk judul hero */
+    margin-bottom: 1rem; /* Margin bawah untuk judul */
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Ukuran font paragraf */
+    margin-bottom: 2rem; /* Margin bawah untuk paragraf */
+}
+
+.hero-content .btn {
+    padding: 10px 20px; /* Padding untuk tombol */
+    color: rgb(0, 0, 0); /* Warna teks tombol hitam */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Border tombol melengkung */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+    cursor: pointer; /* Kursor berubah menjadi pointer saat hover */
+}
+
+/* About Section untuk bagian tentang */
+.about {
+    padding: 50px 20px; /* Padding untuk section */
+    text-align: center; /* Teks rata tengah */
+    background-color: #fff; /* Warna latar putih */
+}
+
+.about h2 {
+    font-size: 2.5rem; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Margin bawah untuk judul */
+}
+
+.about p {
+    font-size: 1.2rem; /* Ukuran font untuk paragraf */
+    color: #666; /* Warna teks abu-abu */
+}
+
+/* Portfolio Section untuk bagian portofolio */
+.portfolio {
+    padding: 50px 20px; /* Padding untuk section */
+    background-color: #f8f8f8; /* Warna latar abu-abu terang */
+    text-align: center; /* Teks rata tengah */
+}
+
+.portfolio h2 {
+    font-size: 2.5rem; /* Ukuran font untuk judul */
+    margin-bottom: 2rem; /* Margin bawah untuk judul */
+    color: #333; /* Warna teks abu-abu gelap */
+}
+
+.portfolio-grid {
+    display: flex; /* Menggunakan flexbox untuk grid */
+    justify-content: center; /* Item grid berada di tengah */
+    gap: 2rem; /* Jarak antar item grid */
+    flex-wrap: wrap; /* Item grid akan membungkus jika ruang tidak cukup */
+}
+
+.portfolio-item {
+    background-color: white; /* Latar belakang putih untuk item */
+    padding: 20px; /* Padding untuk item */
+    border: 1px solid #ddd; /* Border abu-abu terang */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi smooth */
+    width: 300px; /* Lebar tetap untuk item */
+}
+
+.portfolio-item img {
+    max-width: 100%; /* Gambar sesuai lebar item */
+    height: auto; /* Tinggi otomatis */
+    margin-bottom: 15px; /* Margin bawah untuk gambar */
+    border-radius: 8px; /* Gambar dengan sudut melengkung */
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem; /* Ukuran font judul item */
+    color: #191919; /* Warna teks hitam */
+    margin-bottom: 10px; /* Margin bawah untuk judul item */
+}
+
+.portfolio-item p {
+    font-size: 1rem; /* Ukuran font deskripsi item */
+    color: #555; /* Warna teks abu-abu */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Efek melayang saat hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Efek bayangan lebih kuat saat hover */
+}
+
+/* Contact Section untuk bagian kontak */
+.contact {
+    padding: 50px 20px; /* Padding untuk section */
+    background-color: #fff; /* Warna latar putih */
+    text-align: center; /* Teks rata tengah */
+}
+
+.contact h2 {
+    font-size: 2.5rem; /* Ukuran font judul */
+    margin-bottom: 1.5rem; /* Margin bawah untuk judul */
+}
+
+.contact p {
+    font-size: 1.2rem; /* Ukuran font untuk paragraf */
+    color: #666; /* Warna teks abu-abu */
+}
+
+/* Footer untuk bagian bawah halaman */
+footer {
+    padding: 20px; /* Padding untuk footer */
+    background-image: url(../image/backgroundkedua.jpg); /* Gambar latar untuk footer */
+    color: white; /* Warna teks putih */
+    text-align: center; /* Teks rata tengah */
+    /* Bayangan untuk teks di footer */
+    text-shadow: 
+    1px 1px 0px rgba(0, 0, 0, 0.7), /* Bayangan kanan bawah */
+    -1px -1px 0px rgba(0, 0, 0, 0.7), /* Bayangan kiri atas */
+    1px -1px 0px rgba(0, 0, 0, 0.7), /* Bayangan kanan atas */
+    -1px 1px 0px rgba(0, 0, 0, 0.7); /* Bayangan kiri bawah */
+}

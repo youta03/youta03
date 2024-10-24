@@ -1,0 +1,79 @@
+body {
+    /* Mengatur font menjadi Arial, dan alternatif sans-serif jika Arial tidak tersedia */
+    font-family: Arial, sans-serif;
+    /* Warna latar belakang default */
+    background-color: #f4f4f4;
+    /* Menghapus margin default dari body */
+    margin: 0;
+    /* Menambahkan padding di sekeliling konten */
+    padding: 20px;
+    /* Mengatur gambar latar belakang untuk halaman */
+    background-image: url(../image/backgroundkedua.jpg);
+}
+
+.settings-container {
+    /* Warna latar belakang putih untuk container pengaturan */
+    background: white;
+    /* Membuat sudut container sedikit melengkung */
+    border-radius: 8px;
+    /* Menambahkan efek bayangan pada container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Memberikan padding di dalam container */
+    padding: 20px;
+    /* Membatasi lebar maksimal container menjadi 400px */
+    max-width: 400px;
+    /* Memusatkan container di tengah halaman */
+    margin: auto;
+}
+
+h2 {
+    /* Mengatur teks judul agar berada di tengah */
+    text-align: center;
+    /* Memberikan jarak margin di bagian bawah judul */
+    margin-bottom: 20px;
+}
+
+.setting-item {
+    /* Menambahkan margin bawah untuk tiap elemen pengaturan */
+    margin-bottom: 15px;
+}
+
+label {
+    /* Membuat label ditampilkan sebagai blok */
+    display: block;
+    /* Memberikan jarak margin di bawah label */
+    margin-bottom: 5px;
+}
+
+select, input[type="checkbox"], button {
+    /* Mengatur lebar elemen form menjadi 100% dari container-nya */
+    width: 100%;
+    /* Menambahkan padding di dalam elemen form */
+    padding: 10px;
+    /* Memberikan margin atas untuk memberi jarak */
+    margin-top: 5px;
+    /* Menambahkan border dengan warna abu-abu dan sudut melengkung */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    /* Warna latar belakang hijau kebiruan semi-transparan untuk tombol */
+    background-color: rgba(3, 89, 89, 0.501);
+    /* Warna teks tombol putih */
+    color: white;
+    /* Menghapus border default */
+    border: none;
+    /* Mengatur agar kursor berubah menjadi pointer saat berada di atas tombol */
+    cursor: pointer;
+}
+
+button:hover {
+    /* Mengubah warna latar belakang saat tombol di-hover */
+    background-color: rgba(2, 183, 183, 0.501);
+}
+
+.save-btn {
+    /* Memberikan margin atas pada tombol simpan untuk memberi jarak */
+    margin-top: 20px;
+}

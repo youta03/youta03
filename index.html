@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mengatur agar halaman kompatibel dengan versi terbaru Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <!-- Menautkan file CSS eksternal untuk styling halaman -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- CSS untuk halaman login -->
+    <!-- Menautkan file Bootstrap Icons untuk ikon tambahan -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Mengatur tampilan agar responsif di perangkat mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul halaman yang akan tampil di tab browser -->
+    <title>YOUTA FORM</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <!-- Form Login -->
+            <div class="form sign_in">
+                <h3>LOGIN</h3>
+                <span>Masukin email lu</span>
+                <!-- Form login yang mengaktifkan fungsi handleLogin ketika disubmit -->
+                <form id="form_input" onsubmit="return handleLogin(event)">
+                    <!-- Input email -->
+                    <div class="type">
+                        <input type="email" placeholder="EMAIL LU COK" id="email" required>
+                    </div>
+                    <!-- Input password -->
+                    <div class="type">
+                        <input type="password" placeholder="PASSWORD LU COK" id="password" required>
+                    </div>
+                    <!-- Teks untuk mengarahkan ke halaman lupa password -->
+                    <div class="forgot">
+                        <span>Lupa password? pencet disini</span>
+                    </div>
+                    <!-- Tombol submit form login -->
+                    <button type="submit" class="btn bkg">Masuk</button>
+                </form>
+            </div>
+    
+            <!-- Form Sign Up -->
+            <div class="form sign_up">
+                <h3>REGIST</h3>
+                <span>Pake email lu buat registrasi</span>
+                <!-- Form registrasi -->
+                <form action="#" id="form_input">
+                    <!-- Input nama -->
+                    <div class="type">
+                        <input type="text" placeholder="NAMA ISTRI" id="name">
+                    </div>
+                    <!-- Input email -->
+                    <div class="type">
+                        <input type="email" placeholder="EMAIL PUNYA EMAIL KAGA" id="emailSignup">
+                    </div>
+                    <!-- Input password -->
+                    <div class="type">
+                        <input type="password" placeholder="PASSWORD INGET INGET" id="passwordSignup">
+                    </div>
+                    <!-- Tombol submit form registrasi -->
+                    <button class="btn bkg">Buat akun</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Overlay untuk mengubah antara form login dan sign up -->
+        <div class="overlay">
+            <div class="page page_signIn">
+                <h3>Welkom bek bek bek</h3>
+                <p>Bikin akun kesini cil</p>
+                <!-- Tombol untuk pindah ke form sign up -->
+                <button class="btn btnSign-in">Buat <i class="bi bi-arrow-right"></i></button>
+            </div>
+            <div class="page page_signUp">
+                <h3>Haloo prennn</h3>
+                <p>Kalo udah punya akun login aja</p>
+                <!-- Tombol untuk pindah ke form login -->
+                <button class="btn btnSign-up">
+                    <i class="bi bi-arrow-left"></i> Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menautkan file JavaScript eksternal untuk mengatur logika halaman -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+/* Import font dari Google Fonts: Mulish */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Reset margin, padding, dan mengatur box-sizing untuk seluruh elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Mengatur font default dengan Mulish dan fallback ke sans-serif */
+    font-family: 'Mulish', sans-serif;
+    /* Menggunakan flexbox untuk mengatur konten ke tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Menyelaraskan tinggi halaman penuh viewport */
+    background-image: url(../image/backgroundkedua.jpg); /* Pastikan path gambar benar */
+}
+
+.container {
+    width: 60%; /* Lebar container 60% dari viewport */
+    display: flex; /* Flexbox untuk tata letak */
+    height: 650px; /* Tinggi container tetap */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; /* Bayangan untuk efek kedalaman */
+    border-radius: 10px; /* Sudut melengkung */
+    overflow: hidden; /* Menghindari konten keluar dari container */
+}
+
+/* Animasi untuk memperlihatkan elemen secara bertahap */
+@keyframes Show {
+    0%, 49.999% {
+        opacity: 0;
+        z-index: 1;
+    }
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+/* Animasi untuk menyembunyikan elemen secara bertahap */
+@keyframes Hidden {
+    0%, 49.999% {
+        opacity: 1;
+        z-index: 5;
+    }
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+.container .box {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 50%; /* Lebar box 50% dari container */
+    transition: all 0.8s; /* Transisi halus saat box bergeser */
+    transform: translateX(0); /* Posisi awal box */
+    background-color: #fff; /* Warna latar putih */
+    z-index: 1; /* Box di bawah elemen lain secara default */
+}
+
+.container.active .box {
+    transform: translateX(100%); /* Geser box sepenuhnya saat container aktif */
+}
+
+.container .box .form {
+    position: absolute;
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column; /* Mengatur elemen form secara vertikal */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Form signup dengan animasi opacity */
+.container .box .form.sign_up {
+    transition: all 1.15s;
+    z-index: 1;
+    opacity: 0;
+    background-color: #fff;
+}
+
+/* Form sign-in ditampilkan secara default */
+.container .box .form.sign_in {
+    opacity: 1;
+    transition: all 1.15s;
+    z-index: 5;
+    background-color: #fff;
+}
+
+.container.active .box .form.sign_in {
+    z-index: 1;
+    opacity: 0; /* Sembunyikan form sign-in saat container aktif */
+}
+
+.container.active .box .form.sign_up {
+    z-index: 5;
+    opacity: 1; /* Tampilkan form signup saat container aktif */
+}
+
+.container .overlay {
+    display: flex;
+    height: 100%;
+    width: 50%; /* Lebar overlay 50% dari container */
+    transition: all 0.8s;
+    transform: translateX(0); /* Posisi awal overlay */
+    background-color: rgba(135, 206, 250, 0.822); /* Warna latar biru transparan */
+    z-index: 5; /* Overlay berada di atas elemen lain */
+    opacity: 1; /* Opacity penuh untuk overlay */
+}
+
+.container.active .overlay {
+    transform: translateX(-100%); /* Geser overlay sepenuhnya saat container aktif */
+}
+
+.container .overlay .page {
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s; /* Transisi smooth untuk perubahan halaman */
+    opacity: 1; /* Opacity penuh untuk halaman */
+}
+
+.container.active .overlay .page.page_signIn {
+    opacity: 0; /* Sembunyikan halaman sign-in saat container aktif */
+    margin-left: -100%; /* Geser halaman sign-in keluar */
+}
+
+.container.active .overlay .page.page_signUp {
+    margin-left: 0%; /* Halaman signup kembali ke posisi awal */
+}
+
+/* Styling teks pada halaman overlay */
+.overlay .page h3 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 15px; /* Spasi bawah untuk judul */
+}
+
+.overlay .page p {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px; /* Spasi bawah untuk paragraf */
+    font-size: 17px;
+}
+
+/* Tombol dengan teks kapital dan garis border */
+.btn {
+    display: inline-block;
+    outline: none;
+    color: #fff; /* Warna teks putih */
+    text-transform: uppercase; /* Teks dalam huruf kapital */
+    font-size: 15px;
+    font-weight: 550;
+    background-color: transparent;
+    padding: 12px 45px; /* Padding untuk ukuran tombol */
+    border-radius: 22px; /* Sudut melengkung pada tombol */
+    border: 1.5px solid #fff; /* Border putih */
+    cursor: pointer; /* Kursor berubah menjadi pointer */
+}
+
+/* Judul dalam form */
+.form h3 {
+    color: #222; /* Warna teks hitam */
+    font-size: 40px;
+}
+
+/* Teks tambahan dalam form */
+.form span {
+    color: #3a3838; /* Warna teks abu-abu */
+}
+
+/* Input styling dalam form */
+#form_input .type {
+    width: 330px;
+    height: 48px;
+    background-color: #EEEDEF; /* Warna latar input abu-abu terang */
+    margin: 30px 0; /* Spasi vertikal antara input */
+}
+
+#form_input .type input {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px; /* Padding dalam input */
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/* Placeholder dengan warna abu-abu */
+#form_input .type input::placeholder {
+    color: #A9A8A9;
+}
+
+/* Styling untuk link forgot password */
+#form_input .forgot {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Background warna biru untuk elemen dengan class bkg */
+.bkg {
+    background-color: rgba(135, 206, 250, 0.833); /* Biru semi transparan */
+}

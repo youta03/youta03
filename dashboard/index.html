@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Menghubungkan CSS untuk styling dashboard -->
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <!-- Navigasi Utama -->
+    <nav>
+        <div class="logo">
+            <!-- Logo yang bisa diklik untuk kembali ke halaman utama -->
+            <a href="/index.html">
+                <img src="../assets/image/logo.png" alt="Logo Yota">
+            </a>
+        </div>
+        <ul>
+            <!-- Menu navigasi untuk pengaturan, informasi, project, dan kontak -->
+            <li><a href="/setting/index.html">Pengaturan</a></li>
+            <li><a href="#about">Informasi</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bagian Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Sambutan untuk user -->
+            <h1>Selamat Datang di Youta Spidey Company</h1>
+            <p>Di Sini Adalah Koleksi Koleksi Project Yang Saya Buat.</p>
+            <!-- Tombol yang mengarahkan ke bagian project -->
+            <a href="#project" class="btn">klik disini</a>
+        </div>
+    </section>
+
+    <!-- Bagian Tentang Saya -->
+    <section id="about" class="about">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah desainer grafis freelance dengan pengalaman dalam menciptakan solusi desain yang menarik dan fungsional untuk berbagai klien. Dengan pemahaman yang mendalam tentang prinsip desain dan tren terkini, saya berkomitmen untuk memberikan hasil yang memenuhi kebutuhan klien dan membantu mereka mencapai tujuan pemasaran mereka.</p>
+    </section>
+
+    <!-- Bagian Portfolio -->
+    <section id="project" class="portfolio">
+        <h2>Project Saya</h2>
+        <div class="portfolio-grid">
+            <!-- Item Portfolio 1 -->
+            <div class="portfolio-item">
+                <img src="../assets/image/onic.png" alt="Project 1">
+                <h3>Brand Ambassador Campaign</h3>
+                <p>About the Project: Brand Ambassador Campaign <br>
+                    Deskripsi Proyek: Proyek ini bertujuan untuk menciptakan identitas visual yang kuat untuk kampanye brand ambassador kami...</p>
+                <!-- Deskripsi singkat konsep desain dan hasil yang diharapkan -->
+            </div>
+            <!-- Item Portfolio 2 -->
+            <div class="portfolio-item">
+                <img src="../assets/image/projectbasket.png" alt="Project 2">
+                <h3>Basketball Player Campaign</h3>
+                <p>About the Project: Basketball Player Campaign <br>
+                    Deskripsi Proyek: Proyek ini dirancang untuk mempromosikan merek kami melalui kolaborasi dengan seorang pemain basket terkenal...</p>
+            </div>
+            <!-- Item Portfolio 3 -->
+            <div class="portfolio-item">
+                <img src="../assets/image/projectsepatu.png" alt="Project 3">
+                <h3>Shoe Campaign</h3>
+                <p>About the Project: Shoe Campaign <br>
+                    Deskripsi Proyek: Proyek ini bertujuan untuk meluncurkan kampanye pemasaran yang menampilkan produk sepatu basket terbaru kami...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Kontak -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Nama Perusahaan: Youta Spidey Company<br>
+            Email: youtacompany@gmail.com<br>
+            Telepon: [+62 123 4567 890]<br>
+            Alamat: [Jalan Contoh No. 123, Kota, Provinsi, Kode Pos]<br>
+            Jam Kerja: Senin - Jumat: 09.00 - 17.00<br>
+            Sabtu: 10.00 - 14.00<br>
+            Minggu: Tutup
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Youta Spidey Company. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Audio Background -->
+    <audio id="background-music" autoplay loop>
+        <source src="../assets/sounds/lagubackground.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Menghubungkan file JavaScript untuk interaktivitas dashboard -->
+    <script src="/assets/js/dashboard.js"></script>
+</body>
+
+</html>

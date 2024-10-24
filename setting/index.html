@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mengatur agar halaman kompatibel dengan versi terbaru Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mengatur tampilan agar responsif di perangkat mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Menautkan file CSS eksternal untuk styling halaman pengaturan -->
+    <link rel="stylesheet" href="../assets/css/setting.css">
+    <!-- Judul halaman yang akan tampil di tab browser -->
+    <title>Pengaturan</title>
+</head>
+<body>
+    <div class="settings-container">
+        <!-- Judul utama halaman pengaturan -->
+        <h2>Pengaturan</h2>
+        
+        <!-- Opsi untuk memilih tema tampilan (terang, gelap, atau mengikuti sistem) -->
+        <div class="setting-item">
+            <label for="theme">Tema:</label>
+            <select id="theme">
+                <option value="light">Terang</option>
+                <option value="dark">Gelap</option>
+                <option value="system">Sistem</option>
+            </select>
+        </div>
+
+        <!-- Opsi untuk mengaktifkan atau menonaktifkan notifikasi -->
+        <div class="setting-item">
+            <label for="notifications">Notifikasi:</label>
+            <input type="checkbox" id="notifications" checked>
+            <label for="notifications">Aktifkan Notifikasi</label>
+        </div>
+
+        <!-- Opsi untuk memilih bahasa antarmuka -->
+        <div class="setting-item">
+            <label for="language">Bahasa:</label>
+            <select id="language">
+                <option value="indonesia">Bahasa Indonesia</option>
+                <option value="english">English</option>
+                <option value="spanish">Español</option>
+            </select>
+        </div>
+
+        <!-- Tombol untuk mengakses halaman pengaturan akun -->
+        <div class="setting-item">
+            <label for="account">Akun:</label>
+            <button onclick="window.location.href='account.html'">Kelola Akun</button>
+        </div>
+
+        <!-- Tombol untuk menyimpan perubahan pengaturan -->
+        <button class="save-btn">Simpan Perubahan</button>
+    </div>
+</body>
+</html>
